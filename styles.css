@@ -1,0 +1,712 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #800000;
+    --sub-color: #ffe5b4; 
+}
+/* custom css */
+.no-container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.bg-main{
+    background-color: var(--main-color);
+}
+.text-main{
+    color: var(--main-color);
+}
+.bg-sub{
+    background-color: #ffe5b4;
+    padding: 1.5rem;
+}
+.bg-sub-main{
+    background-color: #ffe5b4;
+}
+.text-sub{
+    color: #ffe5b4;
+}
+.fw-medium{
+    font-weight: 800;
+}
+.bg-gray{
+    background-color: lightgray;
+}
+.bg-gradient {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Pinkish to Orange */
+    color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.btn-sub{
+    background-color: #ffe5b4;
+    color: var(--main-color);
+    border: none;
+    transition: 1s ease;
+}
+.btn-peach:hover{
+    background-color: var(--main-color);
+    color: #ffe5b4;
+    border: none;
+}
+
+.btn-outlined {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    transition: 1s ease;
+    background-color: transparent;
+}
+.btn-outlined:hover{
+    color: white;
+    background-color: var(--main-color);
+}
+
+/* Navigations Bar */
+.top-nav{
+    height: 40px;
+    justify-content: space-between; 
+}
+.admin-nav::after{
+    content: "";
+    margin-left: 20px;
+    border-right: 1px solid lightgray;
+}
+.nav-link{
+    text-shadow: 2px 2px 4px rgb(148, 144, 144);
+}
+.logo img{
+    width: 200px;
+    height: 100%;
+}
+.main-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* carousel */
+.carousel-main{
+    position: relative;
+}
+.carousel-overlay{
+    background: #00000077;
+    height: 100%;
+    width: 99%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.carousel-overlay-text{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+.carousel-container {
+    height: 292px;
+    border-radius: 5px;
+}
+.carousel-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    object-position: 50% 30%;
+}
+/* why enroll with us */
+.icon-academic {
+  background-color: #2c3e5080;
+  color: #2C3E50;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 12px 10px;
+  font-size: 30px;
+}
+.icon-life {
+  background-color: #27ae5f52;
+  color: #27AE60;
+  font-size: 30px;
+  padding: 12px 12px;
+  border-radius: 50%;
+}
+.icon-spiritual {
+  background-color: #a931266c; 
+  color: #A93226; 
+  border-radius: 50px;
+  font-size: 30px;
+  padding: 10px 15px;
+}
+
+.home-motto-image{
+    width: 100%;    
+    height: 300px;
+    border-radius: 10px;
+}
+.home-motto-image img{
+    object-position: 50% 35%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.news-event1{
+    height: 292px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+}
+.gallery-arrow{
+    border-radius: 50%;
+}
+.home-photo-container{
+    height: 292px;
+}
+.home-photo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.testimonial-card{
+    position: relative;
+}
+.testimonial-card .testimonial-text{
+    background-color: #fff;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.testimonial-author{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -55px;
+}
+.testimonial-card img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.testimonial-author h5{
+    margin-bottom: 1px;
+}
+
+/* cube gallery */
+.scene {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  perspective: 800px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinY 8s linear infinite;
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #333;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  overflow: hidden;
+}
+.face img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.face.front  { transform: rotateY(0deg) translateZ(100px);}
+.face.back   { transform: rotateY(180deg) translateZ(100px);}
+.face.right  { transform: rotateY(90deg) translateZ(100px);}
+.face.left   { transform: rotateY(-90deg) translateZ(100px);}
+.face.top    { transform: rotateX(90deg) translateZ(100px);}
+.face.bottom { transform: rotateX(-90deg) translateZ(100px);}
+
+@keyframes spinY {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+/* blog section */
+.blog-container-img{
+    height: 360px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    transition: 1s ease-in-out;
+}
+.blog-container-img:hover{
+    transform: scale(1.1);
+}
+.blog-container-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+.blog-container-overlay{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: #0000008c;
+}
+.blog-container-title{
+    position: absolute;
+    top: 80%;
+    left: 7%;
+    color: white;
+}
+.blog-container-title .title{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.blog-container-title .date{
+    font-size: 12px;
+}
+.blog_read{
+    position: absolute;
+    top: 80%;
+    right: 7%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog_read a{
+    color: white;
+    font-size: 16px;    
+}
+.blog_read a i{
+    font-weight: 500;
+}
+
+/* footer */
+footer{
+    z-index: 10001;
+}
+.footer-nav-item{
+    margin-bottom: 5px;
+}
+.hr{
+    width: 80%;
+    margin: 20px auto;
+    height: 1px;
+    background: white;
+}
+
+/* About Page */
+/* Team Section */
+.team-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team-image-container{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.team-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+.team-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.team-name{
+    font-weight: 600;
+    color: var(--main-color);
+    font-size: 16px;
+    margin-bottom: 2px;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+    padding: 1px 5px;
+    width: auto;
+}
+.team-role{
+    color: black;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.team-social i{
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+/* Contact us */
+.contact-wrapper{
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+}
+.contact-form{
+    box-shadow: 2px -4px 5px rgb(243, 235, 235);
+}
+.contact-box{
+    position: relative;
+    top: 5%;
+    left: -30%;
+}
+.contact-text-area{
+    resize: none;
+}
+.contact-button{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.contact-button button{
+    width: 85px;
+    height: 35px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--sub-color);
+}
+.contact-box-details{
+    background-color: var(--sub-color);
+    padding: 10px;
+}
+.text-weight-sm{
+    font-weight: 500;
+}
+.text-weight{
+    font-weight: 600;
+}
+.text-size-1{
+    font-size: 14px;
+}
+.text-size-2{
+    font-size: 13px;
+}
+.text-size-3{
+    font-size: 12px;
+}
+.text-size-4{
+    font-size: 18px;
+}
+.text-size-5{
+    font-size: 10px;
+}
+
+/* main blog */
+.main-blog-container{
+    width: 100%;
+    height: 200px;
+}
+.main-blog-container img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Blog Details */
+.blog-details-image-container{
+    height: 300px;
+    width: 100%;
+}
+.blog-details-image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* admission requirement */
+.admission p{
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+/* admission process */
+.step1{
+    background-color: var(--sub-color);
+    height: 100%;
+}
+.step2{
+    background-color: rgba(34, 138, 156, 0.377);
+    height: 100%;
+}
+.step3{
+    background-color: #c05305c0;
+    height: 100%;
+}
+.step4{
+    background-color: #1285187e;
+    height: 100%;
+}
+
+/* admission form */
+.admission-form-image-class {
+    cursor: pointer;
+    height: auto;
+    border: 2px dotted lightgray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gallery container */
+.gallery-image-container{
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.gallery-image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.gallery-caption{
+    font-size: 11px;
+}
+.modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-body img{
+    width: 100%;
+    height: 100%;
+}
+
+/* folder section */
+.gallery-navs{
+    cursor: pointer;
+}
+.gallery-viewer{
+    display: none;
+}
+.folder-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.folder {
+    position: relative;
+    width: 140px;
+    height: 110px;
+    cursor: pointer;
+}
+
+/* Folder back */
+.folder-back {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background: #f4a600;
+    width: 100%;
+    height: 85px;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Images inside the folder */
+.preview-images {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 100%;
+    z-index: 2; /* Between folder back and flap */
+}
+
+.preview-images img {
+    width: 80%;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.img1{
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: -3px;
+}
+.img2{
+    position: absolute;
+    z-index: 2;
+    left: 13px;
+    top: 5px;
+}
+.img3{
+    position: absolute;
+    z-index: 3;
+    left: 16px;
+    top: 10px;
+}
+.img{
+    transform: skewX(-16deg);
+}
+
+/* Folder flap (in front) */
+.folder-flap {
+    position: absolute;
+    top: 36%;
+    left: 8.8px;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(#fbbc05, #f7b400);
+    border-radius: 4px 4px 4px 4px;
+    z-index: 3;
+    transform: skewX(-18deg);
+}
+
+.folder-name {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+.all-folders{
+    display: none;
+}
+
+/* Leave a review */
+.overlay::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0.8;
+}
+.review-textarea{
+    resize: none;
+}
+.review-overlay-container{
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    display: none;
+}
+.review-form-container{
+    height: auto;
+    width: 80%;
+}
+
+/* testimonial full page */
+.review-button{
+    cursor: pointer;
+}
+.review-container{
+    width: 99%;
+}
+.review-image-container{
+    width: 50px;
+    height: 50px;
+}
+.review-image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 1200px) {
+    /* Team Section */
+    .team-container{
+        margin: auto;
+    }
+    .team{
+        top: -20%;
+        left: 14%;
+    }
+}
+@media (max-width: 1000px) {
+    /* Team Section */
+    .team-container{
+        margin: auto;
+    }
+    .team{
+        top: -20%;
+        left: 17%;
+    }
+}
+@media (max-width: 767px) {
+    .top-nav{
+        justify-content: end;
+    }
+    .top-nav i{
+        display: none;
+    }
+    .top-nav span{
+        display: none;
+    }
+    /* About Page */
+    /* Team Section */
+    .team-container{
+        margin: auto;
+    }
+    .team{
+    top: -20%;
+    left: 30%;
+    }
+    /* contact */
+    .contact-button{
+        justify-content: center;
+    }
+    .contact-box{
+        position: relative;
+        top: 0%;
+        left: 0%;
+    }
+}
+@media (max-width: 320px) {
+    /* Team Section */
+    .team-container{
+        margin: auto;
+    }
+    .team{
+    top: -20%;
+    left: 25%;
+    }
+}

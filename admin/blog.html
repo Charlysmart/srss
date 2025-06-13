@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="./admin_styles.css">
+        <link rel="stylesheet" href="../bootstrap-5.3.4-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
+        <script src="../bootstrap-5.3.4-dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="..//swiper/swiper-bundle.min.js" defer></script>
+        <script src="../script.js" defer></script>
+        <link rel="icon" href="./images/logo-main.png">
+        <title>St. Raphael's Secondary School</title>
+    </head>
+    <body class="bg-light">
+        <main class="text-secondary d-flex flex-column min-vh-100 position-relative" id="overlay">
+            <header id="topNavContainer"></header>
+            <header id="headerContainer" class="main-header flex-grow-1"></header>
+            <section class="container-lg my-2 p-0 rounded shadow-sm gallery-container position-relative">
+                <div class="bg-sub-main gallery-header ps-3 d-flex align-items-start">
+                    <p class="text-main text-weight">Blog<span class="text-secondary text-size-2 text-weight-sm ms-3"> Create and manage blog uploads</span></p>
+                </div>
+                <div class="mb-5 rounded main-bar bg-white p-md-2 min-vh-100">
+                            <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+                                <button class="bg-main m-3 p-2 border-0 text-sub rounded" onclick="window.location.href='./create_blog.html'">Add New Blog</button>
+                            </div>
+                            <div class="mt-4 text-secondary table-wrapper">
+                                <table class="table table-sm">
+                                    
+                                    <thead>
+                                        <tr>
+                                            <td>S/N</td>
+                                            <td>Image</td>
+                                            <td>Title</td>
+                                            <td>Action</td>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="table-image-container">
+                                                <img src="../images/IMG-20250605-WA0021.jpg">
+                                            </div>
+                                        </td>
+                                        <td class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, id?</td>
+                                        <td><button class="btn bg-light border border-dark d-none d-md-table-cell me-2"><i class="fas fa-trash-can"></i></button><button class="btn bg-light border border-dark d-none d-md-table-cell">View</button><button class="btn bg-light border border-dark me-2 d-table-cell d-md-none"><i class="fas fa-eye"></i></button></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer id="footerContainer"></footer>
+        </main>
+    </body>
+</html>

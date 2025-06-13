@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./bootstrap-5.3.4-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+        <script src="./bootstrap-5.3.4-dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src=".//swiper/swiper-bundle.min.js" defer></script>
+        <script src="./script.js" defer></script>
+        <link rel="icon" href="./images/logo-main.png">
+        <title>St. Raphael's Secondary School</title>
+    </head>
+    <body class="bg-light">
+        <main class="text-secondary d-flex flex-column min-vh-100">
+            <header id="topNavContainer"></header>
+            <header id="headerContainer" class="main-header flex-grow-1"></header>
+            <section class="container-md bg-white p-2 py-5 p-lg-5 my-5 rounded shadow">
+                <p class="text-main fs-5 fw-bold text-center mb-1">Our Memories Worth Sharing</p>
+                <div class="nav nav-tabs gallery-navs">
+                    <p class="nav-item nav-link active" id="mediaNav">All Media</p>
+                    <p class="nav-item nav-link" id="foldersNav">All Folders</p>
+                </div>
+                <div class="all-media" id="allMedia">
+                    <div class="row gx-3 mt-4">
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this.src)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-6 mb-4">
+                            <div class="gallery-image-container">
+                                <img src="./images/IMG-20250605-WA0024.jpg" onclick="openModal(this)" alt="">
+                            </div>
+                            <p class="gallery-caption" id="galleryCaption">Students during Assembly</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="all-folders" id="allFolders">
+                    <div class="folder-container">
+                        <!-- Folder 1 -->
+                        <div class="folder" onclick="openFolder(this)">
+                            <div class="folder-back"></div>
+                            <div class="preview-images">
+                            <img src="./images/IMG-20250605-WA0018.jpg" class="img1 img" alt="">
+                            <img src="./images/IMG-20250605-WA0021.jpg" class="img2 img" alt="">
+                            <img src="./images/IMG-20250605-WA0023.jpg" class="img3 img" alt="">
+                            </div>
+                            <div class="folder-flap"></div>
+                            <div class="folder-name" id="folderName">Class Photos</div>
+                        </div>
+                        <div class="folder" onclick="alert('Open Folder 1')">
+                            <div class="folder-back"></div>
+                            <div class="preview-images">
+                            <img src="./images/IMG-20250605-WA0018.jpg" class="img1 img" alt="">
+                            <img src="./images/IMG-20250605-WA0021.jpg" class="img2 img" alt="">
+                            <img src="./images/IMG-20250605-WA0023.jpg" class="img3 img" alt="">
+                            </div>
+                            <div class="folder-flap"></div>
+                            <div class="folder-name">Class Photos</div>
+                        </div>
+                        <div class="folder" onclick="alert('Open Folder 1')">
+                            <div class="folder-back"></div>
+                            <div class="preview-images">
+                            <img src="./images/IMG-20250605-WA0019.jpg" class="img1 img" alt="">
+                            <img src="./images/IMG-20250605-WA0037.jpg" class="img2 img" alt="">
+                            <img src="./images/IMG-20250605-WA0030.jpg" class="img3 img" alt="">
+                            </div>
+                            <div class="folder-flap"></div>
+                            <div class="folder-name">Class Photos</div>
+                        </div>
+                        <div class="folder" onclick="alert('Open Folder 1')">
+                            <div class="folder-back"></div>
+                            <div class="preview-images">
+                            <img src="./images/IMG-20250605-WA0018.jpg" class="img1 img" alt="">
+                            <img src="./images/IMG-20250605-WA0021.jpg" class="img2 img" alt="">
+                            <img src="./images/IMG-20250605-WA0023.jpg" class="img3 img" alt="">
+                            </div>
+                            <div class="folder-flap"></div>
+                            <div class="folder-name">Class Photos</div>
+                        </div>
+                        <div class="folder" onclick="alert('Open Folder 1')">
+                            <div class="folder-back"></div>
+                            <div class="preview-images">
+                            <img src="./images/IMG-20250605-WA0018.jpg" class="img1 img" alt="">
+                            <img src="./images/IMG-20250605-WA0021.jpg" class="img2 img" alt="">
+                            <img src="./images/IMG-20250605-WA0023.jpg" class="img3 img" alt="">
+                            </div>
+                            <div class="folder-flap"></div>
+                            <div class="folder-name">Class Photos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-3 gallery-viewer" id="galleryViewer"></div>
+            </section>
+            <div class="modal" id="myModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="btn-close" onclick="closeModal()"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img alt="" id="modal-img">
+                        </div>
+                        <div class="modal-footer">
+                            <p id="modal-caption"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footerContainer"></footer>
+        </main>
+        <script>
+            function openModal(src) {
+                // let caption = img.parentElement.nextElementSibling.textContent;
+                document.getElementById('myModal').style.display = 'flex';
+                document.getElementById('modal-img').src = src;
+                // document.getElementById('modal-caption').textContent = caption;
+            }
+            function closeModal(){
+                document.getElementById('myModal').style.display = 'none';
+            }
+
+            //for opening each media nav
+            const mediaNav = document.getElementById('mediaNav');
+            const foldersNav = document.getElementById('foldersNav');
+            const allMedia = document.getElementById('allMedia');
+            const allFolders = document.getElementById('allFolders');
+            foldersNav.addEventListener('click', function() {
+                mediaNav.classList.remove('active');
+                foldersNav.classList.add('active');
+                allFolders.style.display = 'block';
+                allMedia.style.display = 'none';
+                galleryViewer.style.display = 'none';
+            });
+            mediaNav.addEventListener('click', function() {
+                foldersNav.classList.remove('active');
+                mediaNav.classList.add('active');
+                allMedia.style.display = 'block';
+                allFolders.style.display = 'none';
+                galleryViewer.style.display = 'none';
+            });
+
+            // to view each folder
+            const galleryViewer = document.getElementById('galleryViewer');
+            // const foldername = document.getElementById('folderElement');
+            function openFolder(folderElement) {
+                allFolders.style.display = 'none';
+                allMedia.style.display = 'none';
+                galleryViewer.innerHTML = '';
+                const folderName = folderElement.querySelector('.folder-name').textContent;
+                const imagePreview = folderElement.querySelectorAll('.preview-images img');
+                imagePreview.forEach(img => {
+                    const imageContainer = document.createElement("div");
+                    imageContainer.classList = 'mt-4 col-lg-2 col-md-3 col-6 mb-4';
+                    const image = document.createElement("img");
+                    image.src = img.src;
+                    image.style.width = '100%';
+                    image.style.height = '120px';
+                    image.onclick = function() {
+                        openModal(this.src);
+                    };
+                    imageContainer.appendChild(image);
+                    galleryViewer.appendChild(imageContainer);
+                    console.log(galleryViewer);
+                });
+                galleryViewer.style.display = 'flex';
+            }
+        </script>
+    </body>
+</html>

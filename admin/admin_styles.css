@@ -1,0 +1,206 @@
+/* register */
+.register-container{
+    height: 500px;
+}
+.register-image-container{
+    width: 90%;
+    height: 500px;
+}
+.register-image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* login */
+.login-container{
+    height: 400px;
+}
+.login-image-container{
+    width: 90%;
+    height: 400px;
+}
+.login-image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* gallery container */
+.gallery-header{
+    height: 30px;
+}
+.sidebar{
+    border-right: 1px solid lightgray;
+    height: 100vh;
+    cursor: pointer;
+}
+.folder-lists{
+    list-style: none;
+}
+.table-wrapper{
+    height: calc(100vh - 30px);
+    overflow-y: auto;
+}
+table{
+    overflow-y: auto;
+}
+
+.table-image-container{
+    width: 50px;
+    height: 35px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.table-image-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+td{
+    vertical-align: middle;
+}
+
+/* upload image */
+.overlay::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0.8;
+}
+.caption-textarea{
+    resize: none;
+}
+.add-image-container{
+    border: 1px dashed gray;
+    width: 50%;
+    margin: auto;
+}
+.upload-form-container{
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    display: none;
+}
+.upload-form{
+    height: auto;
+    width: 80%;
+}
+
+/* blog */
+.blog-content{
+    height: 150px;
+    resize: none;
+}
+@media (max-width: 968px) {
+    .add-image-container{
+        border: 1px dashed gray;
+        width: 70%;
+        margin: auto;
+    }
+    .sidebar{
+        /* display: none; */
+        position: fixed;
+        z-index: 1000;
+        background-color: white;
+        left: -100%;
+    }
+    .show{
+        animation: showSidebar 0.5s ease-in-out forwards;
+    }
+    .hide{
+        animation: hideSidebar 0.5s ease-in-out forwards;
+    }
+
+    @keyframes showSidebar {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+        
+    }
+    @keyframes hideSidebar {
+        from {
+            left: 0;
+        }
+        to {
+            left: -100%;
+        }
+        
+    }
+}
+
+
+@media (max-width: 767px) {
+    /* register */
+    .register-container{
+        height: auto;
+    }
+    .register-image-container{
+        width: 100%;
+        height: 350px;
+    }
+
+    /* login */
+    .login-container{
+        height: auto;
+    }
+    .login-image-container{
+        width: 100%;
+        height: 350px;
+    }
+    .add-image-container{
+    border: 1px dashed gray;
+    width: 100%;
+    margin: auto;
+    }
+    .upload-form {
+        width: 90%;
+    }
+
+    .sidebar{
+        /* display: none; */
+        position: fixed;
+        z-index: 1000;
+        background-color: white;
+        left: -100%;
+    }
+    .show{
+        animation: showSidebar 0.5s ease-in-out forwards;
+    }
+    .hide{
+        animation: hideSidebar 0.5s ease-in-out forwards;
+    }
+
+    @keyframes showSidebar {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+        
+    }
+    @keyframes hideSidebar {
+        from {
+            left: 0;
+        }
+        to {
+            left: -100%;
+        }
+        
+    }
+}
+

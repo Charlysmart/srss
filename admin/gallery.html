@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="./admin_styles.css">
+        <link rel="stylesheet" href="../bootstrap-5.3.4-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
+        <script src="../bootstrap-5.3.4-dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="..//swiper/swiper-bundle.min.js" defer></script>
+        <script src="../script.js" defer></script>
+        <link rel="icon" href="./images/logo-main.png">
+        <title>St. Raphael's Secondary School</title>
+    </head>
+    <body class="bg-light">
+        <main class="text-secondary d-flex flex-column min-vh-100 position-relative" id="overlay">
+            <header id="topNavContainer"></header>
+            <header id="headerContainer" class="main-header flex-grow-1"></header>
+            <section class="container-lg my-2 p-0 rounded shadow-sm gallery-container position-relative">
+                <div class="bg-sub-main gallery-header ps-3 d-flex align-items-start">
+                    <p class="text-main text-weight">Gallery<span class="text-secondary text-size-2 text-weight-sm ms-3"> Upload and manage images and events</span></p>
+                </div>
+                <div class="px-3">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6 col-9 d-lg-block sidebar" id="sideBar">
+                            <p class="mt-3"><i class="fas fa-image"></i> All Images</p>
+                                <div id="allFolders">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <p class="mb-2"><i class="fas fa-caret-right text-size-2 me-2"></i><i class="fas fa-folder"></i> Media Library</p>
+                                        <i class="fas fa-plus" title="Add New Folder" id="createFolder"></i>
+                                    </div>
+                                        
+                                    <ul class="folder-lists text-size-2">
+                                        <div class="mb-0" id="createNewFolder">
+                                            
+                                        </div>
+                                        <li><i class="fas fa-caret-right text-size-3 me-2"></i><i class="fas fa-folder"></i> Assembly Ground</li>
+                                        <li><i class="fas fa-caret-right text-size-3 me-2"></i><i class="fas fa-folder"></i> Assembly Ground</li>
+                                    </ul>
+                                </div>
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-10 mb-5 rounded main-bar bg-white p-md-2 min-vh-100">
+                            <div class="d-flex justify-content-lg-end justify-content-between align-items-center">
+                                <i class="fas fa-arrow-right d-lg-none" title="Open Sidebar" id="openSidebar"></i>
+                                <button class="bg-main m-3 p-2 border-0 text-sub rounded" onclick="displayUploadForm()">Upload Image</button>
+                            </div>
+                            <div class="mt-4 text-secondary table-wrapper">
+                                <table class="table table-sm">
+                                    
+                                    <thead>
+                                        <tr>
+                                            <td>S/N</td>
+                                            <td>Name</td>
+                                            <td class="d-none d-md-table-cell">File Size</td>
+                                            <td class="d-none d-md-table-cell">Upload Date</td>
+                                            <td class="d-none d-md-table-cell">Uploader</td>
+                                            <td>Action</td>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="table-image-container me-2 d-none d-md-inline-block">
+                                                <img src="../images/IMG-20250605-WA0021.jpg">
+                                            </div>
+                                            IMG-20250605-WA0021.jpg
+                                        </td>
+                                        <td class="d-none d-md-table-cell">592 KB</td>
+                                        <td class="d-none d-md-table-cell">6/5/2022 6:15 AM</td>
+                                        <td class="d-none d-md-table-cell">Admin</td>
+                                        <td><button class="btn bg-light border border-dark d-none d-md-table-cell me-2"><i class="fas fa-trash-can"></i></button><button class="btn bg-light border border-dark d-none d-md-table-cell">Preview</button><button class="btn bg-light border border-dark me-2 d-table-cell d-md-none"><i class="fas fa-eye"></i></button></td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- upload image -->
+                <div class="gallery-container-wrapper"></div>
+                <section class="position-absolute upload-form-container" id="uploadFormContainer">
+                    <div class="upload-form bg-white p-5 rounded shadow-sm">
+                        <p class="fw-bold text-main fs-5 text-center">Upload Image</p>
+                        <div class="mt-3">
+                            <form action="" id="uploadForm">
+                                <div class="row gx-4">
+                                    <div class="col-md-6 mb-3">
+                                        <input name="caption" id="caption" placeholder="Enter Image Caption" class="form-control">
+                                    </div>
+                                    <div class="col-md-5 mb-3">
+                                        <input type="text" name="folder" id="folder" class="form-control" value="Assembly Ground" readonly>
+                                    </div>
+                                </div>
+                                <div class="add-image-container p-5 mt-5" id="addImage" onclick="document.getElementById('images').click()">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <p class="mb-2"><span class="far fa-image me-1"></span>Select Images to Upload</p>
+                                        <p>supports JPG, JPEG & PNG</p>
+                                    </div>
+                                    <input type="file" name="images" id="images" accept="images" multiple class="d-none" onchange="previewImage(this)">
+                                </div>
+                                <div class="image-preview d-flex flex-wrap mt-4" id="imagePreview"></div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="bg-gray border-0 px-3 py-1 rounded text-dark me-2" id="closeForm">Cancel</button>
+                                    <input type="submit" value="Upload" class="bg-main border-0 px-3 py-1 rounded text-sub">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <footer id="footerContainer"></footer>
+        </main>
+        <script>
+            // for image preview
+            function previewImage(input) {
+                const preview = document.getElementById('imagePreview');
+                if (input.files.length === 0) {
+                    preview.textContent = "No Image Selected yet";
+                    return;
+                }
+                Array.from(input.files).forEach(file => {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const div = document.createElement('div');
+                        div.style.maxHeight = "70px";
+                        div.style.maxWidth = "90px";
+                        div.style.margin = "10px";
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.maxHeight = "100%";
+                        img.style.maxWidth = "100%";
+                        img.style.objectFit = "cover";
+                        div.appendChild(img);
+                        preview.appendChild(div);
+                    }
+                    reader.readAsDataURL(file);
+                });
+            }
+
+            //for displaying the form
+            let uploadFormContainer = document.getElementById("uploadFormContainer"); 
+            let overlay = document.getElementById('overlay');
+            function displayUploadForm() {
+                uploadFormContainer.style.display = 'flex';
+                overlay.classList.add('overlay');
+            }
+            // To close the upload form
+            let closeForm = document.getElementById('closeForm');
+            closeForm.addEventListener('click', function(event) {
+                event.preventDefault();
+                uploadFormContainer.style.display = 'none';
+                overlay.classList.remove('overlay');
+            });
+            document.getElementById('uploadForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Image uploaded');
+            });
+
+            //to display the sidebar
+            document.getElementById('openSidebar').addEventListener('click', function() {
+                let sideBar = document.getElementById('sideBar');
+                sideBar.classList.remove('hide');
+                sideBar.classList.add('show');
+            });
+
+            //to close the sidebar
+            let sideBar = document.getElementById('sideBar');
+            let openSidebar = document.getElementById('openSidebar');
+            document.addEventListener('click', function(e) {
+                if (!sideBar.contains(e.target) && !openSidebar.contains(e.target)) {
+                    sideBar.classList.remove('show');
+                    sideBar.classList.add('hide');                        
+                }
+            });
+
+            //to create new folder
+            document.getElementById('createFolder').addEventListener('click', function() {
+                let newFolder = document.getElementById('createNewFolder');
+                newFolder.innerHTML = `<form action="">
+                                                <input type="text" class="form-control-sm border-secondary border-1 w-100" name="new-folder" id="newFolder">
+                                            </form>`;
+            });
+        </script>
+    </body>
+</html>

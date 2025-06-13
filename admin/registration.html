@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="./admin_styles.css">
+        <link rel="stylesheet" href="../bootstrap-5.3.4-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
+        <script src="../bootstrap-5.3.4-dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="..//swiper/swiper-bundle.min.js" defer></script>
+        <script src="../script.js" defer></script>
+        <link rel="icon" href="./images/logo-main.png">
+        <title>St. Raphael's Secondary School</title>
+    </head>
+    <body class="bg-light">
+        <main class="text-secondary d-flex flex-column min-vh-100">
+            <header id="topNavContainer"></header>
+            <header id="headerContainer" class="main-header flex-grow-1"></header>
+            <section class="container-md bg-white p-2 py-5 p-lg-5 my-5 rounded">
+                <div class="row gx-3 register-container">
+                    <div class="col-md-6">
+                        <div class="register-image-container">
+                            <img src="../images/IMG-20250605-WA0036.jpg" class="rounded" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="rounded shadow p-5 h-100">
+                            <p class="fw-bold text-main fs-5 mb-0 text-center">Welcome to Admin's Portal</p>
+                            <p class="text-weight text-center">Register</p>
+                            <div class="mt-4">
+                                <form action="">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" name="username" id="username" class="form-control mb-3" placeholder="Enter Username">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control mb-3" placeholder="Enter Password">
+                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                    <input type="password" name="confirmPassword" id="confirmPassword" class="form-control mb-3" placeholder="Re-enter Password">
+                                    <div class="d-flex justify-content-center">
+                                        <input type="submit" value="Register" class="border-0 bg-main text-sub py-2 px-4 rounded">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer id="footerContainer"></footer>
+        </main>
+    </body>
+</html>

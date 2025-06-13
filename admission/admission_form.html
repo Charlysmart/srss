@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../bootstrap-5.3.4-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
+        <script src="../bootstrap-5.3.4-dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="..//swiper/swiper-bundle.min.js" defer></script>
+        <script src="../script.js" defer></script>
+        <link rel="icon" href="./images/logo-main.png">
+        <title>St. Raphael's Secondary School</title>
+    </head>
+    <body class="bg-light">
+        <main class="text-secondary d-flex flex-column min-vh-100">
+            <header id="topNavContainer"></header>
+            <header id="headerContainer" class="main-header flex-grow-1"></header>
+            <section class="container-md bg-white p-2 py-5 p-lg-5 my-5 rounded shadow">
+                <p class="text-main fs-5 fw-bold text-center mb-1">APPLICATION FORM</p>
+                <p class="text-center">Please complete the details below and we will contact you for the entrance examination.</p>
+                <div class="mt-5">
+                    <form action="">
+                        <div class="row gx-3">
+                            <div class="col-md-6 mb-4">
+                                <label for="classEntry">Desired Class Of Entry</label>
+                                <select class="form-select" name="class-entry" id="classEntry" required>
+                                    <option value="" selected disabled>Select a Class</option>
+                                    <option value="JSS 1">JSS 1</option>
+                                    <option value="JSS 2">JSS 2</option>
+                                    <option value="JSS 3">JSS 3</option>
+                                    <option value="SSS 1">SSS 1</option>
+                                    <option value="SSS 2">SSS 2</option>
+                                    <option value="SSS 3">SSS 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="surname" class="form-label">Surname</label>
+                                <input type="text" class="form-control" name="surname" id="surname" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" name="first_name" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="otherNames" class="form-label">Other Names</label>
+                                <input type="text" class="form-control" name="othernames" id="otherNames" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="gender">Gender</label>
+                                <div class="form-check">
+                                    <label for="male" class="form-check-label">Male</label>
+                                    <input type="radio" name="gender" id="male" class="form-check-input" value="Male">
+                                </div>
+                                <div class="form-check">
+                                    <label for="female" class="form-check-label">Female</label>
+                                    <input type="radio" name="gender" id="female" class="form-check-input" value="Female">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-5">
+                                <label for="dob" class="form-label">Date Of Birth</label>
+                                <input type="date" class="form-control" name="dob" id="dob" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="state" class="form-label">State Of Origin</label>
+                                <input type="text" class="form-control" name="state" id="state" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="lga" class="form-label">Local Government Area</label>
+                                <input type="text" class="form-control" name="lga" id="lga" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="village" class="form-label">Village</label>
+                                <input type="text" class="form-control" name="village" id="village" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="address" class="form-label">Address Of Residence</label>
+                                <input type="text" class="form-control" name="address" id="address" required>
+                            </div>
+                            <div class="col-md-6 mb-4" class="form-label">
+                                <label for="parentName">Parents or Guardian's Name</label>
+                                <input type="text" class="form-control" name="parentsname" id="parentName" required>
+                            </div>
+                            <div class="col-md-6 mb-4" class="form-label">
+                                <label for="parentNo">Parents or Guardian's Phone Number</label>
+                                <input type="text" class="form-control" name="parentno" id="parentNo" required>
+                            </div>
+                            <div class="col-md-6 mb-4" class="form-label">
+                                <label for="parentEmail">Parents or Guardian's Email</label>
+                                <input type="email" class="form-control" name="parentemail" id="parentEmail" required>
+                            </div>
+                            <div class="col-md-6 mb-4" class="form-label">
+                                <label for="schoolName">Current School Name</label>
+                                <input type="text" class="form-control" name="schoolname" id="schoolName" required>
+                            </div>
+                            <div class="col-md-6 mb-4" class="form-label">
+                                <label for="schoolAddresss">Current School Address</label>
+                                <input type="text" class="form-control" name="schooladdresss" id="schoolAddresss" required>
+                            </div>
+                            <div class="col-md-6 mb-4" class="form-label">
+                                <label for="presentClass">Current Class</label>
+                                <input type="text" class="form-control" name="presentclass" id="presentClass" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="passport" class="form-label">Passport Photograph</label>
+                                <div class="admission-form-image-class" onclick="document.getElementById('passport').click()">
+                                    <div id="fileName">
+                                        <p class="mb-2">Click to Upload Passport</p>
+                                        <p>PNG, JPG, GIF up to 10MB</p>
+                                    </div>
+                                    <input type="file" name="" accept="images/*" onchange="updateFileName(this)" required class="d-none" id="passport">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="payment" class="form-label">Evidence of Payment</label>
+                                <div class="admission-form-image-class" onclick="document.getElementById('payment').click()">
+                                    <div id="fileNamePayment">
+                                        <p class="mb-2">Click to Upload Payment Evidence</p>
+                                        <p>PNG, JPG, GIF up to 10MB</p>
+                                    </div>
+                                    <input type="file" name="" accept="images/*" onchange="updatefileNamePayment(this)" required class="d-none" id="payment">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" value="Submit" class="bg-main text-sub px-3 py-1 rounded border-0">
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <footer id="footerContainer"></footer>
+        </main>
+        <script>
+            function updateFileName(input) {
+                const FileName = input.files.length > 0 ? input.files[0].name : "Click to Upload Passport";
+                document.getElementById('fileName').textContent = FileName;
+            }
+            function updatefileNamePayment(input) {
+                const fileNamePayment = input.files.length > 0 ? input.files[0].name : "Click to Upload Payment Evidence";
+                document.getElementById('fileNamePayment').textContent = fileNamePayment;
+            }
+        </script>
+    </body>
+</html>
